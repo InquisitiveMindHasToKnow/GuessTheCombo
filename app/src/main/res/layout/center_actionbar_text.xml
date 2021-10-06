@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:gravity="center"
-        android:text="Guess The Combo"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
