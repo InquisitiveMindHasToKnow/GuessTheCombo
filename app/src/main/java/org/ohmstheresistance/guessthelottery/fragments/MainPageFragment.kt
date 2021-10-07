@@ -41,14 +41,14 @@ class MainPageFragment : Fragment() {
         val num = "3"
         val minNum = "0"
         val maxNum = "9"
-        val format = "html"
+        val format = "plain"
         val rnd = "new"
 
         val url = "https://www.random.org/integers/?num=" + num + "&min=" + minNum + "&max=" + maxNum + "&col=" + col + "&base=" + baseOfNumbers + "&format=" + format + "&rnd=" + rnd
-
         val request = Request.Builder()
             .url(url)
             .build()
+
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 Toast.makeText(context, "Failed to get numbers", Toast.LENGTH_LONG).show()
@@ -58,14 +58,14 @@ class MainPageFragment : Fragment() {
             override fun onResponse(call: Call, response: Response) {
                 if(response.isSuccessful){
 
-                    val guessedCombo = response.body.toString()
+                    var guessedCombo = response.body?.string()
+                    Log.e("GuessedCombo", guessedCombo.toString())
 
                     MainScope().launch {
                         withContext(Dispatchers.Default) {
 
                         }
                         mainPageFragmentBinding.displayComboTextview.text = "Today's combo will be " + guessedCombo
-                        Log.d("WORK DAMMIT", url)
                     }
                 }
 
