@@ -65,7 +65,7 @@ class MainPageFragment : Fragment() {
                         withContext(Dispatchers.Default) {
 
                         }
-                        mainPageFragmentBinding.displayComboTextview.text = "Today's combo will be " + guessedCombo
+                        mainPageFragmentBinding.comboTextview.text = guessedCombo
                     }
                 }
 

@@ -6,7 +6,8 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color">
 
     <TextView
         android:id="@+id/greeting_textview"
@@ -21,11 +22,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/display_combo_textview"
+        android:id="@+id/combo_header_text_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:paddingTop="16dp"
+        android:text="The winning combo for today will be:"
         app:layout_constraintTop_toBottomOf="@id/greeting_textview"
         />
+
+    <TextView
+        android:id="@+id/combo_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:paddingTop="16dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/combo_header_text_textview"
+        />
+
+    <ImageView
+        android:id="@+id/ny_lottery_logo_imageview"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:paddingBottom="32dp"
+        android:src="@drawable/nylotterylogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
