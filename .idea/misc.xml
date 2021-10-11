@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11875" />
         <entry key="app/src/main/res/layout/center_actionbar_text.xml" value="0.11875" />
         <entry key="app/src/main/res/layout/main_page_fragment.xml" value="0.1046875" />
+        <entry key="app/src/main/res/layout/numbers_fragment.xml" value="0.1078125" />
+        <entry key="app/src/main/res/layout/pick4_fragment.xml" value="0.1078125" />
       </map>
     </option>
   </component>
