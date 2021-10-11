@@ -36,7 +36,7 @@ class MainPageFragment : Fragment() {
             )
         }
         gamesViewPagerAdapter?.addFragments(NumbersFragment(), "Numbers")
-        gamesViewPagerAdapter?.addFragments(Pick4Fragment(), "Pick 4")
+        gamesViewPagerAdapter?.addFragments(Win4Fragment(), "Win4")
 
         viewPager?.adapter = gamesViewPagerAdapter
     }
